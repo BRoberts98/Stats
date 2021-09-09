@@ -48,7 +48,7 @@ body {
     display: block;
   }
   
-  .topnav-centered a, .topnav-right{
+  .topnav-centered a {
     position: relative;
     top: 0;
     left: 0;
