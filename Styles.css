@@ -48,11 +48,7 @@ body {
     display: block;
   }
   
-  .topnav-right a {
-      float: right;
-  }
-  
-  .topnav-centered a {
+  .topnav-centered a, .topnav-right{
     position: relative;
     top: 0;
     left: 0;
