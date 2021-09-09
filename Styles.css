@@ -48,8 +48,8 @@ body {
     display: block;
   }
   
-  .topnav-right {
-      float:right;
+  .topnav-right a {
+      float: right;
   }
   
   .topnav-centered a {
