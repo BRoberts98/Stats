@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Football News Daily</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Styles.css">
+</head>
+<body src="NFL1.jpg">
+<div class="site-container debug">
+<header class="header-container">
+  <div class="topnav">
+  <div class="topnav-left">
+    <a href="https://broberts98.github.io/Stats/index.html">Home</a>
+    <a href="https://broberts98.github.io/Stats/NFL.html">NFL</a>
+    <a href="https://broberts98.github.io/Stats/NCAA.html">NCAA</a>
+  </div>
+  <div class="topnav-centered">
+    <a class="active"><strong>Football News Daily</strong></a>
+  </div>
+  <div class="topnav-right">
+    <a href="#search">Contact</a>
+    <a href="#about">Apply</a>
+  </div>
+  </div>
+    <div class="container">
+        <header class="header">
+          <h1 id="title" class="text-center">Application Form</h1>
+          <p id="description" class="description text-center">
+            Come join the Football News Daily Team!
+          </p>
+        </header>
+        <form action="https://sheetdb.io/api/v1/j26etvbds43ch" method="POST" id="sheetdb-form">
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input
+              type="text"
+              name="data[Name]"
+              id="name"
+              class="form-control"
+              placeholder="Enter your first and last name"
+              required
+            />
+          </div>
+          <div class="form-group">
+              <label id="contact-label" for="contact number">Twitter Handle, Email, or Discord (Please include which platform)</label>
+              <input
+              type="text"
+              name="data[Contact]"
+              id="text"
+              class="form-control"
+              placeholder="Enter your contact number"
+              required
+            />
+          </div>
+    
+          <div class="form-group">
+            <p>What is your favorite NCAA and/or NFL team?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="data[Favorite Team]"
+              placeholder="Please include your favorite team..."
+            ></textarea>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    
+      <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            alert('Thank you for you intrest! A team member will reach out as soon as possibe')
+          });
+        });
+      </script>
